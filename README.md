@@ -7,6 +7,8 @@ A new approach to handle grounding for rigidbody characters in physically dynami
 
 Documentation is still WIP and code samples are very overcomplicated.
 
+while all the research, design and implementation are done, the publishing of it all (AKA this repo) still needs a lot of work. I just haven't found the time yet
+
 ---
 ## What is this?
 
