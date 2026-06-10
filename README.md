@@ -5,7 +5,7 @@ A new approach to handle grounding for rigidbody characters in physically dynami
 ---
 ## !!DISCLAIMER!!
 
-Documentation is still WIP, but the technical side is pretty much finished.
+Documentation is still WIP and code samples are very overcomplicated.
 
 ---
 ## What is this?
@@ -30,4 +30,19 @@ You can still try it out in Unity to see it in action though. Just clone this re
 
 ## The design
 
-...
+In this design a character can overlap with the environment. An "up" vector is specified: the special axis. When a character
+collides with something the collision gets modified to allow the two colliders to overlap based on the both the special axis
+and the relative velocity. When overlapping, a force is applied on the character along the special axis to lift them up and
+out of the environment. A character can move up and out of a collider, but never deeper inside. 
+
+This design results in a system where characters can smoothly move over obstacles or up steps, but can never be pushed down
+into the ground. 
+
+
+![Drawing of design](design-sketch.png)
+
+
+## Future
+
+The sample code was taken straight from the game with only the namespaces being changed. It has a few logic bugs and is very 
+overcomplicated. My current goal is to clean everything up to create a simple, readable and portable design/spec and sample.
